@@ -1,7 +1,9 @@
-import React from 'react'
+import { Center } from '@chakra-ui/react'
 
 export default function Footer() {
   return (
-    <div>Footer</div>
+    <Center>
+      this is a footer
+    </Center>
   )
 }

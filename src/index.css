@@ -1,8 +1,25 @@
 :root {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+*{
+  box-sizing: border-box;
+  text-decoration: none;
 }
 
 body {
+  margin: 0;
+  padding: 0;
   min-width: 320px;
-  min-height: 100vh;
+  max-width: 100vw;
+}
+#root {
+  min-height: 100svh;
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
