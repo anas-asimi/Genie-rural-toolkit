@@ -16,7 +16,7 @@ export default function MyNumberInput(props) {
             <Text textTransform='capitalize' pb='1'>{props.label} :</Text>
             <NumberInput
                 variant='filled'
-                precision={2}
+                precision={props.precision && 2}
                 defaultValue={props.value}
                 onChange={(value) => { props.handler(props.label, value) }}>
                 <NumberInputField />
