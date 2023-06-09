@@ -40,7 +40,7 @@ export default function Storage() {
               </Thead>
               <Tbody>
                 <Tr>
-                  <Td>Surface de geomembrane</Td>
+                  <Td>Geomembrane</Td>
                   <Td>square meter (m2)</Td>
                   <Td isNumeric>{parseInt(getValue('geomembrane', parameters))}</Td>
                 </Tr>
