@@ -11,24 +11,32 @@ import {
 	Show,
 	Spacer,
 	VStack,
+	useColorMode,
 	useDisclosure,
 } from "@chakra-ui/react";
 import { MdMenu, MdOutlineClose } from "react-icons/md";
+import { FaMoon, FaSun } from "react-icons/fa";
 import { Link as ReactLink } from "react-router-dom";
 
 export default function Header() {
 	const { isOpen, onToggle } = useDisclosure();
+	const { colorMode, toggleColorMode } = useColorMode();
 
 	return (
 		<>
-			<Center w='100%' bg='white' boxShadow="0px 0px 4px 0px rgba(0,0,0,0.2)">
+			<Center w='100%' boxShadow="0px 0px 4px 0px rgba(0,0,0,0.2)">
 				<Container maxWidth='6xl'>
-					<Flex as="header" w="100%" p='16px'>
+					<Flex as="header" w="100%" p='16px' gap='16px'>
 						<Link textDecorationColor='transparent !important' as={ReactLink} to="/">
 							<Heading>Genie Rural Toolkit</Heading>
 						</Link>
 						<Spacer />
+
 						<Show below="lg">
+							<IconButton
+								icon={colorMode === 'light' ? <FaMoon /> : <FaSun />}
+								onClick={toggleColorMode}
+							/>
 							<Box onClick={onToggle}>
 								{isOpen ? (
 									<IconButton
@@ -47,21 +55,26 @@ export default function Header() {
 						</Show>
 						<Show above="lg">
 							<HStack as="nav" gap="24px" fontSize="xl" fontFamily='Josefin Sans' textTransform="capitalize">
-								<Link color="black" w='100%' textAlign='end' as={ReactLink} to="/">
+								<Link w='100%' textAlign='end' as={ReactLink} to="/">
 									home
 								</Link>
-								<Link color="black" w='100%' textAlign='end' as={ReactLink} to="/storage">
+								<Link w='100%' textAlign='end' as={ReactLink} to="/storage">
 									storage
 								</Link>
-								<Link color="black" w='100%' textAlign='end' as={ReactLink} to="/pomps">
+								<Link w='100%' textAlign='end' as={ReactLink} to="/pomps">
 									pomps
 								</Link>
-								<Link color="black" w='100%' textAlign='end' as={ReactLink} to="/coordinates">
+								<Link w='100%' textAlign='end' as={ReactLink} to="/coordinates">
 									coordinates
 								</Link>
-								<Link color="black" w='100%' textAlign='end' as={ReactLink} to="/about">
+								<Link w='100%' textAlign='end' as={ReactLink} to="/about">
 									about
 								</Link>
+								<IconButton
+									icon={colorMode === 'light' ? <FaMoon /> : <FaSun />}
+									onClick={toggleColorMode}
+									variant="outline"
+								/>
 							</HStack>
 						</Show>
 					</Flex>
@@ -77,24 +90,24 @@ export default function Header() {
 						textTransform="capitalize"
 						alignItems="flex-end"
 						p='16px 32px'
-						bg='white'
+					
 						boxShadow="0px 0px 4px 0px rgba(0,0,0,0.2)"
 						mb='4px'
 						fontFamily='Josefin Sans'
 					>
-						<Link color="black" w='100%' textAlign='end' py='4px' onClick={onToggle} as={ReactLink} to="/">
+						<Link w='100%' textAlign='end' py='4px' onClick={onToggle} as={ReactLink} to="/">
 							home
 						</Link>
-						<Link color="black" w='100%' textAlign='end' py='4px' onClick={onToggle} as={ReactLink} to="/storage">
+						<Link w='100%' textAlign='end' py='4px' onClick={onToggle} as={ReactLink} to="/storage">
 							storage
 						</Link>
-						<Link color="black" w='100%' textAlign='end' py='4px' onClick={onToggle} as={ReactLink} to="/pomps">
+						<Link w='100%' textAlign='end' py='4px' onClick={onToggle} as={ReactLink} to="/pomps">
 							pomps
 						</Link>
-						<Link color="black" w='100%' textAlign='end' py='4px' onClick={onToggle} as={ReactLink} to="/coordinates">
+						<Link w='100%' textAlign='end' py='4px' onClick={onToggle} as={ReactLink} to="/coordinates">
 							coordinates
 						</Link>
-						<Link color="black" w='100%' textAlign='end' py='4px' onClick={onToggle} as={ReactLink} to="/about">
+						<Link w='100%' textAlign='end' py='4px' onClick={onToggle} as={ReactLink} to="/about">
 							about
 						</Link>
 					</VStack>
