@@ -26,7 +26,7 @@ export default function Header() {
 		<>
 			<Center w='100%' boxShadow="0px 0px 4px 0px rgba(0,0,0,0.2)">
 				<Container maxWidth='6xl'>
-					<Flex as="header" w="100%" p='16px' gap='16px'>
+					<Flex as="header" w="100%" py='16px' gap='16px'>
 						<Link textDecorationColor='transparent !important' as={ReactLink} to="/">
 							<Heading>Genie Rural Toolkit</Heading>
 						</Link>
