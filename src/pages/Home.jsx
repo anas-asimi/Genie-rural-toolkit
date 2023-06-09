@@ -1,9 +1,10 @@
-import { Box, Button, Center, HStack, Heading, Image, Show, VStack } from "@chakra-ui/react";
+import { Box, Button, Center, Container, HStack, Heading, Image, Show, VStack } from "@chakra-ui/react";
 import { Link, Link as ReactLink } from "react-router-dom";
 
 export default function Home() {
   return (
-    <Center as="main" w='100%' flex='1' p='16px' maxW='1200px'>
+    <Center as="main" w='100%' flex='1' p='16px'>
+      <Container maxWidth='6xl'>
       <Show above="lg">
       <HStack>
           <Box flex='1' minWidth='380px'>
@@ -50,6 +51,7 @@ export default function Home() {
         </Box>
       </VStack>
       </Show>
+      </Container>
     </Center>
   )
 }
