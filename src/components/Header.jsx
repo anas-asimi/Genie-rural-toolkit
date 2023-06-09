@@ -20,7 +20,7 @@ export default function Header() {
 
 	return (
 		<>
-			<Center w='100%' boxShadow="0px 0px 8px 0px rgba(0,0,0,0.1)">
+			<Center w='100%' bg='gray.100' boxShadow="0px 0px 4px 0px rgba(0,0,0,0.2)">
 				<Flex as="header" w="100%" p='16px' maxW='1200px'>
 					<Heading>Genie Rural Toolkit</Heading>
 					<Spacer />
@@ -63,7 +63,7 @@ export default function Header() {
 				</Flex>
 			</Center>
 			<Show below="lg">
-				<Collapse in={isOpen}>
+				<Collapse in={isOpen} >
 					<VStack
 						as="nav"
 						w='100vw'
@@ -72,7 +72,8 @@ export default function Header() {
 						textTransform="capitalize"
 						alignItems="flex-end"
 						p='16px 32px'
-						boxShadow="0px 0px 8px 0px rgba(0,0,0,0.1)"
+						bg='gray.100'
+						boxShadow="0px 0px 4px 0px rgba(0,0,0,0.2)"
 						mb='4px'
 					>
 						<Link color="black" onClick={onToggle} as={ReactLink} to="/">
