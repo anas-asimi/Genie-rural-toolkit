@@ -20,9 +20,11 @@ export default function Header() {
 
 	return (
 		<>
-			<Center w='100%' bg='gray.100' boxShadow="0px 0px 4px 0px rgba(0,0,0,0.2)">
+			<Center w='100%' bg='white' boxShadow="0px 0px 4px 0px rgba(0,0,0,0.2)">
 				<Flex as="header" w="100%" p='16px' maxW='1200px'>
-					<Heading>Genie Rural Toolkit</Heading>
+					<Link textDecorationColor='transparent !important' as={ReactLink} to="/">
+						<Heading>Genie Rural Toolkit</Heading>
+					</Link>
 					<Spacer />
 					<Show below="lg">
 						<Box onClick={onToggle}>
@@ -42,20 +44,20 @@ export default function Header() {
 						</Box>
 					</Show>
 					<Show above="lg">
-						<HStack as="nav" gap="24px" fontSize="lg" textTransform="capitalize">
-							<Link color="black" as={ReactLink} to="/">
+						<HStack as="nav" gap="24px" fontSize="xl" fontFamily='Josefin Sans' textTransform="capitalize">
+							<Link color="black" w='100%' textAlign='end' as={ReactLink} to="/">
 								home
 							</Link>
-							<Link color="black" as={ReactLink} to="/storage">
+							<Link color="black" w='100%' textAlign='end' as={ReactLink} to="/storage">
 								storage
 							</Link>
-							<Link color="black" as={ReactLink} to="/pomps">
+							<Link color="black" w='100%' textAlign='end' as={ReactLink} to="/pomps">
 								pomps
 							</Link>
-							<Link color="black" as={ReactLink} to="/coordinates">
+							<Link color="black" w='100%' textAlign='end' as={ReactLink} to="/coordinates">
 								coordinates
 							</Link>
-							<Link color="black" as={ReactLink} to="/about">
+							<Link color="black" w='100%' textAlign='end' as={ReactLink} to="/about">
 								about
 							</Link>
 						</HStack>
@@ -67,28 +69,29 @@ export default function Header() {
 					<VStack
 						as="nav"
 						w='100vw'
-						gap="8px"
-						fontSize="lg"
+						gap="0"
+						fontSize="xl"
 						textTransform="capitalize"
 						alignItems="flex-end"
 						p='16px 32px'
-						bg='gray.100'
+						bg='white'
 						boxShadow="0px 0px 4px 0px rgba(0,0,0,0.2)"
 						mb='4px'
+						fontFamily='Josefin Sans'
 					>
-						<Link color="black" onClick={onToggle} as={ReactLink} to="/">
+						<Link color="black" w='100%' textAlign='end' py='4px' onClick={onToggle} as={ReactLink} to="/">
 							home
 						</Link>
-						<Link color="black" onClick={onToggle} as={ReactLink} to="/storage">
+						<Link color="black" w='100%' textAlign='end' py='4px' onClick={onToggle} as={ReactLink} to="/storage">
 							storage
 						</Link>
-						<Link color="black" onClick={onToggle} as={ReactLink} to="/pomps">
+						<Link color="black" w='100%' textAlign='end' py='4px' onClick={onToggle} as={ReactLink} to="/pomps">
 							pomps
 						</Link>
-						<Link color="black" onClick={onToggle} as={ReactLink} to="/coordinates">
+						<Link color="black" w='100%' textAlign='end' py='4px' onClick={onToggle} as={ReactLink} to="/coordinates">
 							coordinates
 						</Link>
-						<Link color="black" onClick={onToggle} as={ReactLink} to="/about">
+						<Link color="black" w='100%' textAlign='end' py='4px' onClick={onToggle} as={ReactLink} to="/about">
 							about
 						</Link>
 					</VStack>
