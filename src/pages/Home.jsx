@@ -23,7 +23,7 @@ export default function Home() {
             </VStack>
           </Box>
           <Box minW='480px' width='50%' >
-            <Image src='./landing.jpg' alt='irrigation' objectFit='cover'/>
+            <Image src='./landing.png' alt='irrigation' objectFit='cover'/>
           </Box>
         </Flex>
         {/* <Show below="lg">
