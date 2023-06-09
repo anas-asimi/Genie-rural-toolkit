@@ -1,7 +1,8 @@
-import React from 'react'
+import { Center } from "@chakra-ui/react";
 
 export default function Coordinates() {
   return (
-    <div>Coordinates</div>
-  )
+    <Center as="main" w='100%' flex='1'>
+      Coordinates
+    </Center>  )
 }

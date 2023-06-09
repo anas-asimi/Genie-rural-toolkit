@@ -1,7 +1,8 @@
-import React from 'react'
+import { Center } from "@chakra-ui/react";
 
 export default function Notfound() {
   return (
-    <div>Notfound</div>
-  )
+    <Center as="main" w='100%' flex='1'>
+      Notfound
+    </Center>  )
 }
