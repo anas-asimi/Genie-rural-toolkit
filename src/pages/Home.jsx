@@ -14,7 +14,7 @@ export default function Home() {
               <Heading fontSize='64px' fontFamily='Josefin Sans'>
                 Your Life
               </Heading>
-              <Heading fontSize='48px' fontFamily='Courgette' color='green.400'>
+              <Heading fontSize='48px' fontFamily='Caveat' color='green.400'>
                 Much Easier
               </Heading>
               <Link as={ReactLink} to="/storage">
