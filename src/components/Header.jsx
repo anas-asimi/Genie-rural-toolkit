@@ -73,7 +73,6 @@ export default function Header() {
 								<IconButton
 									icon={colorMode === 'light' ? <FaMoon /> : <FaSun />}
 									onClick={toggleColorMode}
-									variant="outline"
 								/>
 							</HStack>
 						</Show>

@@ -5,20 +5,21 @@ import {
     NumberInputStepper,
     NumberIncrementStepper,
     NumberDecrementStepper,
-    Text,
     Box,
+    FormLabel,
 } from '@chakra-ui/react'
 
 export default function MyNumberInput(props) {
 
     return (
         <Box>
-            <Text textTransform='capitalize' pb='1'>{props.label} :</Text>
+            <FormLabel htmlFor={props.label} textTransform='capitalize' pb='1'>{props.label} :</FormLabel>
             <NumberInput
+                id={props.label}
+                precision={2}
                 variant='filled'
-                precision={props.precision && 2}
-                defaultValue={props.value}
-                onChange={(value) => { props.handler(props.label, value) }}>
+                {...props}
+            >
                 <NumberInputField />
                 <NumberInputStepper>
                     <NumberIncrementStepper />
