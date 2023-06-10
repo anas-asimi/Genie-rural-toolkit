@@ -23,37 +23,37 @@ export default function About() {
           <Text>I will buy the coffee.</Text>
         </Box>
         <HStack spacing="4" w='100%'>
-          <Link href="https://facebook.com/AnasAssimi10/">
+          <Link target="_blank" href="https://facebook.com/AnasAssimi10/">
             <IconButton
               variant='solid'
               icon={<FaFacebookF />}
             />
           </Link>
-          <Link href="https://www.linkedin.com/in/anas-asimi/">
+          <Link target="_blank" href="https://www.linkedin.com/in/anas-asimi/">
             <IconButton
               variant='solid'
               icon={<FaLinkedinIn />}
             />
           </Link>
-          <Link href="https://github.com/anas-asimi">
+          <Link target="_blank" href="https://github.com/anas-asimi">
             <IconButton
               variant='solid'
               icon={<FaGithubAlt />}
             />
           </Link>
-          <Link href="mailto:anas2020cr7@gmail.com">
+          <Link target="_blank" href="mailto:anas2020cr7@gmail.com">
             <IconButton
               variant='solid'
               icon={<MdSms />}
             />
           </Link>
-          <Link href="tel:+212697748319">
+          <Link target="_blank" href="tel:+212697748319">
             <IconButton
               variant='solid'
               icon={<FaPhoneAlt />}
             />
           </Link>
-          <Link href="https://asimianas.netlify.app/">
+          <Link target="_blank" href="https://asimianas.netlify.app/">
             <IconButton
               variant='solid'
               icon={<BiWorld />}
