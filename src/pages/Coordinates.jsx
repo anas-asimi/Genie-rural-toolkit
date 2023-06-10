@@ -1,5 +1,5 @@
 /* eslint-disable no-unreachable */
-import { Box, Button, Center, FormLabel, Select, VStack } from "@chakra-ui/react";
+import { Box, Button, Divider, Flex, FormLabel, Heading, Select, VStack } from "@chakra-ui/react";
 import transformation from 'transform-coordinates'
 import MyNumberInput from "../components/MyNumberInput";
 import { useState } from "react";
@@ -27,9 +27,19 @@ export default function Coordinates() {
   }
 
   return (
-    <Center as="main" w='100%' flex='1'>
+    <Flex
+      as="main"
+      w='100%'
+      px='32px'
+      py='64px'
+      alignItems='center'
+      flexDirection='column'
+      gap='32px'
+      flex='1'>
+      <Heading>Coordinates converter</Heading>
+      <Divider />
       <VStack gap='16px'>
-        <MyNumberInput label='x' value={x} onChange={(valueString) => setX(Number(valueString))}/>
+        <MyNumberInput label='x' value={x} onChange={(valueString) => setX(Number(valueString))} />
         <MyNumberInput label='y' value={y} onChange={(valueString) => setY(Number(valueString))} />
         <Box width='100%'>
           <FormLabel htmlFor='zone' textTransform='capitalize' pb='1'>zone :</FormLabel>
@@ -42,5 +52,6 @@ export default function Coordinates() {
         </Box>
         <Button size='lg' width='100%' mt='16px' colorScheme="blue" onClick={goTo}>Go To</Button>
       </VStack>
-    </Center>)
+    </Flex>
+  )
 }

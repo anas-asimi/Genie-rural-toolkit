@@ -1,73 +1,89 @@
-import { Center, Container, Flex, SimpleGrid, Table, TableContainer, Tbody, Td, Th, Thead, Tr } from "@chakra-ui/react";
+import { Divider, Flex, Heading, SimpleGrid, Table, TableContainer, Tbody, Td, Th, Thead, Tr } from "@chakra-ui/react";
 import MyNumberInput from '../components/MyNumberInput'
 import { useState } from "react";
 
 export default function Storage() {
 
-  const [parameters, setParameters] = useState({
-    longueur: 20,
-    largeur: 20,
-    profondeur: 4,
-    talus: 1,
-  });
-
-  function handleChange(name, value) {
-    setParameters({
-      ...parameters,
-      [name]: Number(value)
-    })
-  }
+  let [longueur, setLongueur] = useState(24)
+  let [largeur, setLargeur] = useState(24)
+  let [profondeur, setProfondeur] = useState(4)
+  let [talus, setTalus] = useState(1)
 
 
   return (
-    <Center as="main" w='100%' flex='1'>
-      <Container maxWidth='6xl'>
-        <Flex gap='48px' wrap='wrap' alignItems='center' justifyContent='center'>
-          <SimpleGrid columns={2} gap='16px 32px' height='100%' minWidth='min(500px , 100%)' flex='1' fontSize='xl'>
-            <MyNumberInput label='longueur' value={parameters.longueur} handler={handleChange} />
-            <MyNumberInput label='largeur' value={parameters.largeur} handler={handleChange} />
-            <MyNumberInput label='profondeur' value={parameters.profondeur} handler={handleChange} />
-            <MyNumberInput label='talus' value={parameters.talus} handler={handleChange} />
-          </SimpleGrid>
-          <TableContainer flex='1' minWidth='min(500px , 100%)'>
-            <Table variant='simple' colorScheme='teal' >
-              <Thead>
-                <Tr>
-                  <Th>Property</Th>
-                  <Th>Unite</Th>
-                  <Th isNumeric>Value</Th>
-                </Tr>
-              </Thead>
-              <Tbody>
-                <Tr>
-                  <Td>Geomembrane</Td>
-                  <Td>square meter (m2)</Td>
-                  <Td isNumeric>{parseInt(getValue('geomembrane', parameters))}</Td>
-                </Tr>
-                <Tr>
-                  <Td>Volume totale</Td>
-                  <Td>cubic meter (m3)</Td>
-                  <Td isNumeric>{parseInt(getValue('volume Totale', parameters))}</Td>
-                </Tr>
-                <Tr>
-                  <Td>Volume utile</Td>
-                  <Td>cubic meter (m3)</Td>
-                  <Td isNumeric>{parseInt(getValue('volume Utile', parameters))}</Td>
-                </Tr>
-                <Tr>
-                  <Td>Cloture </Td>
-                  <Td>metres (m)</Td>
-                  <Td isNumeric>{parseInt(getValue('cloture', parameters))}</Td>
-                </Tr>
-              </Tbody>
-            </Table>
-          </TableContainer>
-        </Flex>
-      </Container>
-    </Center>
+    <Flex
+      as="main"
+      w='100%'
+      px='32px'
+      py='64px'
+      alignItems='center'
+      flexDirection='column'
+      gap='32px'
+      flex='1'>
+      <Heading>Water storage</Heading>
+      <Divider />
+      <Flex width='100%' gap='48px' wrap='wrap' alignItems='flex-start' justifyContent='center'>
+        <SimpleGrid columns={2} gap='16px 32px' height='100%' minWidth='min(500px , 100%)' flex='1' fontSize='xl'>
+          <MyNumberInput 
+          label='longueur' 
+          value={longueur} 
+          onChange={(valueString) => setLongueur(Number(valueString))} 
+          />
+          <MyNumberInput 
+          label='largeur' 
+          value={largeur} 
+          onChange={(valueString) => setLargeur(Number(valueString))} 
+          />
+          <MyNumberInput 
+          label='profondeur' 
+          value={profondeur} 
+          onChange={(valueString) => setProfondeur(Number(valueString))} 
+          />
+          <MyNumberInput 
+          label='talus' 
+          value={talus} 
+          onChange={(valueString) => setTalus(Number(valueString))} 
+          />
+        </SimpleGrid>
+        <TableContainer flex='1' minWidth='min(500px , 100%)'>
+          <Table variant='simple' colorScheme='gray' >
+            <Thead>
+              <Tr>
+                <Th>Property</Th>
+                <Th>Unite</Th>
+                <Th isNumeric>Value</Th>
+              </Tr>
+            </Thead>
+            <Tbody>
+              <Tr>
+                <Td>Geomembrane</Td>
+                <Td>square meter (m2)</Td>
+                <Td isNumeric>{parseInt(getValue('geomembrane', {longueur,largeur,profondeur,talus}))}</Td>
+              </Tr>
+              <Tr>
+                <Td>Volume totale</Td>
+                <Td>cubic meter (m3)</Td>
+                <Td isNumeric>{parseInt(getValue('volume Totale', {longueur,largeur,profondeur,talus}))}</Td>
+              </Tr>
+              <Tr>
+                <Td>Volume utile</Td>
+                <Td>cubic meter (m3)</Td>
+                <Td isNumeric>{parseInt(getValue('volume Utile', {longueur,largeur,profondeur,talus}))}</Td>
+              </Tr>
+              <Tr>
+                <Td>Cloture </Td>
+                <Td>metres (m)</Td>
+                <Td isNumeric>{parseInt(getValue('cloture', {longueur,largeur,profondeur,talus}))}</Td>
+              </Tr>
+            </Tbody>
+          </Table>
+        </TableContainer>
+      </Flex>
+    </Flex>
   )
 }
 
+// technical functions
 
 function volume_totale(longueur, largeur, profondeur, talus) {
   let S1 = longueur * largeur
