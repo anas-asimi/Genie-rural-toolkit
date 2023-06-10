@@ -4,6 +4,7 @@ import transformation from 'transform-coordinates'
 import MyNumberInput from "../components/MyNumberInput";
 import { useState } from "react";
 
+
 // indexs of locaols coodinates systemes while (index + 1) equal to the zone number
 const ZONE_index = ['EPSG:26191', 'EPSG:26192', 'EPSG:26194', 'EPSG:26195']
 // index of the global coodinate systeme
@@ -11,18 +12,18 @@ const WGS_index = 'EPSG:4326'
 
 export default function Coordinates() {
 
-  let [x, setX] = useState(0)
-  let [y, setY] = useState(0)
+  let [xValue, setX] = useState(0)
+  let [yValue, setY] = useState(0)
   let [zone, setZone] = useState(1)
 
   function goTo() {
-    let transform = transformation(ZONE_index[zone], WGS_index)
-    let { resultX, resultY } = transform.forward({ x: x, y: y })
-    if (isNaN(resultX) || isNaN(resultY)) {
+    let transform = transformation(ZONE_index[zone - 1], WGS_index)
+    let { x, y } = transform.forward({ x: xValue, y: yValue })
+    if (isNaN(x) || isNaN(y)) {
       console.log('return values are not numbers')
       return
     }
-    const URL = `https://www.google.com/maps/search/${resultY},+${resultX}`
+    const URL = `https://www.google.com/maps/search/${y},+${x}`
     window.open(URL, '_blank');
   }
 
@@ -39,8 +40,8 @@ export default function Coordinates() {
       <Heading>Coordinates converter</Heading>
       <Divider />
       <VStack gap='16px'>
-        <MyNumberInput label='x' value={x} onChange={(valueString) => setX(Number(valueString))} />
-        <MyNumberInput label='y' value={y} onChange={(valueString) => setY(Number(valueString))} />
+        <MyNumberInput label='x' value={xValue} onChange={(valueString) => setX(Number(valueString))} />
+        <MyNumberInput label='y' value={yValue} onChange={(valueString) => setY(Number(valueString))} />
         <Box width='100%'>
           <FormLabel htmlFor='zone' textTransform='capitalize' pb='1'>zone :</FormLabel>
           <Select id="zone" placeholder='Select option' value={zone} onChange={(ele) => setZone(ele.target.selectedIndex)}>
