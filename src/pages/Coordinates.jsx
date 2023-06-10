@@ -39,9 +39,9 @@ export default function Coordinates() {
       flex='1'>
       <Heading>Coordinates converter</Heading>
       <Divider />
-      <VStack gap='16px'>
-        <MyNumberInput label='x' value={xValue} onChange={(valueString) => setX(Number(valueString))} />
-        <MyNumberInput label='y' value={yValue} onChange={(valueString) => setY(Number(valueString))} />
+      <VStack gap='16px' minWidth='min(400px , 100%)'>
+        <MyNumberInput width='100%' label='x' value={xValue} onChange={(valueString) => setX(Number(valueString))} />
+        <MyNumberInput width='100%' label='y' value={yValue} onChange={(valueString) => setY(Number(valueString))} />
         <Box width='100%'>
           <FormLabel htmlFor='zone' textTransform='capitalize' pb='1'>zone :</FormLabel>
           <Select id="zone" placeholder='Select option' value={zone} onChange={(ele) => setZone(ele.target.selectedIndex)}>

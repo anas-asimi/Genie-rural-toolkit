@@ -12,7 +12,7 @@ import {
 export default function MyNumberInput(props) {
 
     return (
-        <Box>
+        <Box width={props.width}>
             <FormLabel htmlFor={props.label} textTransform='capitalize' pb='1'>{props.label} :</FormLabel>
             <NumberInput
                 id={props.label}
