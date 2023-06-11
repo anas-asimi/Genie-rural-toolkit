@@ -1,14 +1,9 @@
 /* eslint-disable no-unreachable */
 import { Box, Button, Divider, Flex, FormLabel, Heading, Select, VStack } from "@chakra-ui/react";
-import transformation from 'transform-coordinates'
+import transformer from '../utils/transformer.js'
 import MyNumberInput from "../components/MyNumberInput";
 import { useState } from "react";
 
-
-// indexs of locaols coodinates systemes while (index + 1) equal to the zone number
-const ZONE_index = ['EPSG:26191', 'EPSG:26192', 'EPSG:26194', 'EPSG:26195']
-// index of the global coodinate systeme
-const WGS_index = 'EPSG:4326'
 
 export default function Coordinates() {
 
@@ -17,8 +12,8 @@ export default function Coordinates() {
   let [zone, setZone] = useState(1)
 
   function goTo() {
-    let transform = transformation(ZONE_index[zone - 1], WGS_index)
-    let { x, y } = transform.forward({ x: xValue, y: yValue })
+    let transformFunction = transformer[zone - 1].transform
+    let { x, y } = transformFunction.forward({ x: xValue, y: yValue })
     if (isNaN(x) || isNaN(y)) {
       console.log('return values are not numbers')
       return

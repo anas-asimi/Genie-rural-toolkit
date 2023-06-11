@@ -1,0 +1,57 @@
+{
+  "26191": {
+    "code": "26191",
+    "kind": "CRS-PROJCRS",
+    "name": "Merchich / Nord Maroc",
+    "wkt": "PROJCS[\"Merchich / Nord Maroc\",GEOGCS[\"Merchich\",DATUM[\"Merchich\",SPHEROID[\"Clarke 1880 (IGN)\",6378249.2,293.466021293627],TOWGS84[31,146,47,0,0,0,0]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4261\"]],PROJECTION[\"Lambert_Conformal_Conic_1SP\"],PARAMETER[\"latitude_of_origin\",33.3],PARAMETER[\"central_meridian\",-5.4],PARAMETER[\"scale_factor\",0.999625769],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",300000],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"26191\"]]",
+    "proj4": "+proj=lcc +lat_1=33.3 +lat_0=33.3 +lon_0=-5.4 +k_0=0.999625769 +x_0=500000 +y_0=300000 +ellps=clrk80ign +towgs84=31,146,47,0,0,0,0 +units=m +no_defs +type=crs",
+    "bbox": [35.97, -9.85, 31.49, -1.01],
+    "unit": "metre",
+    "area": "Morocco onshore north of 35 grads North (31°30'N).",
+    "accuracy": 7
+  },
+  "26192": {
+    "code": "26192",
+    "kind": "CRS-PROJCRS",
+    "name": "Merchich / Sud Maroc",
+    "wkt": "PROJCS[\"Merchich / Sud Maroc\",GEOGCS[\"Merchich\",DATUM[\"Merchich\",SPHEROID[\"Clarke 1880 (IGN)\",6378249.2,293.466021293627],TOWGS84[31,146,47,0,0,0,0]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4261\"]],PROJECTION[\"Lambert_Conformal_Conic_1SP\"],PARAMETER[\"latitude_of_origin\",29.7],PARAMETER[\"central_meridian\",-5.4],PARAMETER[\"scale_factor\",0.999615596],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",300000],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"26192\"]]",
+    "proj4": "+proj=lcc +lat_1=29.7 +lat_0=29.7 +lon_0=-5.4 +k_0=0.999615596 +x_0=500000 +y_0=300000 +ellps=clrk80ign +towgs84=31,146,47,0,0,0,0 +units=m +no_defs +type=crs",
+    "bbox": [31.51, -13.24, 27.66, -3.59],
+    "unit": "metre",
+    "area": "Morocco onshore south of 35 grads North (31°30'N).",
+    "accuracy": 7
+  },
+  "26194": {
+    "code": "26194",
+    "kind": "CRS-PROJCRS",
+    "name": "Merchich / Sahara Nord",
+    "wkt": "PROJCS[\"Merchich / Sahara Nord\",GEOGCS[\"Merchich\",DATUM[\"Merchich\",SPHEROID[\"Clarke 1880 (IGN)\",6378249.2,293.466021293627],TOWGS84[31,146,47,0,0,0,0]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4261\"]],PROJECTION[\"Lambert_Conformal_Conic_1SP\"],PARAMETER[\"latitude_of_origin\",26.1],PARAMETER[\"central_meridian\",-5.4],PARAMETER[\"scale_factor\",0.999616304],PARAMETER[\"false_easting\",1200000],PARAMETER[\"false_northing\",400000],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"26194\"]]",
+    "proj4": "+proj=lcc +lat_1=26.1 +lat_0=26.1 +lon_0=-5.4 +k_0=0.999616304 +x_0=1200000 +y_0=400000 +ellps=clrk80ign +towgs84=31,146,47,0,0,0,0 +units=m +no_defs +type=crs",
+    "bbox": [27.67, -15.42, 24.29, -8.66],
+    "unit": "metre",
+    "area": "Western Sahara - onshore north of 27grads North (24°18'N).",
+    "accuracy": 7
+  },
+  "26195": {
+    "code": "26195",
+    "kind": "CRS-PROJCRS",
+    "name": "Merchich / Sahara Sud",
+    "wkt": "PROJCS[\"Merchich / Sahara Sud\",GEOGCS[\"Merchich\",DATUM[\"Merchich\",SPHEROID[\"Clarke 1880 (IGN)\",6378249.2,293.466021293627],TOWGS84[31,146,47,0,0,0,0]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4261\"]],PROJECTION[\"Lambert_Conformal_Conic_1SP\"],PARAMETER[\"latitude_of_origin\",22.5],PARAMETER[\"central_meridian\",-5.4],PARAMETER[\"scale_factor\",0.999616437],PARAMETER[\"false_easting\",1500000],PARAMETER[\"false_northing\",400000],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"26195\"]]",
+    "proj4": "+proj=lcc +lat_1=22.5 +lat_0=22.5 +lon_0=-5.4 +k_0=0.999616437 +x_0=1500000 +y_0=400000 +ellps=clrk80ign +towgs84=31,146,47,0,0,0,0 +units=m +no_defs +type=crs",
+    "bbox": [24.31, -17.16, 20.71, -12],
+    "unit": "metre",
+    "area": "Western Sahara - onshore south of 27grads North (24°18'N).",
+    "accuracy": 7
+  },
+  "4326": {
+    "code": "4326",
+    "kind": "CRS-GEOGCRS",
+    "name": "WGS 84",
+    "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]",
+    "proj4": "+proj=longlat +datum=WGS84 +no_defs",
+    "bbox": [90, -180, -90, 180],
+    "unit": "degree (supplier to define representation)",
+    "area": "World.",
+    "accuracy": null
+  }
+}
