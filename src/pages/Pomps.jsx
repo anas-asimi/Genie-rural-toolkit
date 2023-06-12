@@ -29,6 +29,7 @@ export default function Pomps() {
     <Flex
       as="main"
       w='100%'
+      maxWidth='6xl'
       px='32px'
       py='64px'
       alignItems='center'

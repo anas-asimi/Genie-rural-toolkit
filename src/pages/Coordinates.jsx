@@ -26,6 +26,7 @@ export default function Coordinates() {
     <Flex
       as="main"
       w='100%'
+      maxWidth='6xl'
       px='32px'
       py='64px'
       alignItems='center'
